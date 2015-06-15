@@ -12,7 +12,9 @@ module.exports = function(grunt) {
                 },
                 files: [
                     '<%= appConfig.app %>/*.html',
-                    '<%= appConfig.app %>/*.js'
+                    '<%= appConfig.app %>/styles/*.css',
+                    '<%= appConfig.app %>/*.js',
+                    '<%= appConfig.app %>/img/*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
         },

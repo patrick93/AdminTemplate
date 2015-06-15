@@ -4,16 +4,19 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1" />
 </head>
 
 <body layout="row" ng-controller="AppCtrl">
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="isOpen">
-        <header></header>
+    <md-sidenav layout="column" class="nav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="isOpen && $mdMedia('gt-sm')">
+        <header layout="column" class="header md-whiteframe-z1" layout-align="center center">
+            <img src="img/logo.png" class="logo-img"/>
+        </header>
     </md-sidenav>
     <div layout="column" flex>
-        <md-toolbar layout="column">
+        <md-toolbar layout="column" class="md-whiteframe-z1">
             <div class="md-toolbar-tools">
                 <md-button ng-click="toggleSidenav('left')" class="md-icon-button">
                     <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
