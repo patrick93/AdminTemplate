@@ -2,7 +2,7 @@ var app = angular.module('StarterApp', ['ngMaterial'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
         .primaryPalette('blue', {
-            'default': '300'
+            'default': 'A200'
         });
     });
 

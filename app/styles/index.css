@@ -1,13 +1,14 @@
-.logo-img{
-    max-height: 64px;
-    height: 64px;
-    width: 128px
+.logo-img {
+  max-height: 64px;
+  height: 64px;
+  width: 128px
 }
-
-.nav{
-    background-color: #FF8A65
+.nav {
+  background-color: #E0E0E0;
 }
-
-.header{
-    background-color: #FF7043
+.content {
+  background-color: #F5F5F5;
+}
+.header {
+  background-color: #FF6E40
 }
