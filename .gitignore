@@ -2,4 +2,4 @@
 /node_modules/
 /typings/
 /.tscache/
-app/*.js
+app/**/*.js
