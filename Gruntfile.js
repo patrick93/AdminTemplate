@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         appConfig: config,
         watch: {
             ts: {
-                files: ['<%= appConfig.app %>/*.ts'],
+                files: ['<%= appConfig.app %>/**/*.ts'],
                 tasks: ['ts']
             },
             livereload: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         },
         ts: {
             default: {
-                src: ["<%= appConfig.app %>/*.ts", "!node_modules/**/*.ts", "typings/**/*.d.ts"],
+                src: ["<%= appConfig.app %>/**/*.ts", "!node_modules/**/*.ts", "typings/**/*.d.ts"],
                 options: {
                     sourceMap: false
                 }
