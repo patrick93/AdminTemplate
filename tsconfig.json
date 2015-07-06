@@ -16,7 +16,9 @@
     ],
     "files": [
         "./app/app.ts",
+        "./app/components/main/mainController.ts",
         "./app/components/menu/menuController.ts",
+        "./app/components/menu/menuFactory.ts",
         "./typings/angularjs/angular.d.ts",
         "./typings/jquery/jquery.d.ts",
         "./typings/tsd.d.ts"
