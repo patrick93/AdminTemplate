@@ -1,32 +1,6 @@
 <ul class="docs-menu">
     <li class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
-        <md-button ng-class="{'active' : isSelected(section)}" ng-click="focusSection()" ng-href="{{(section.type === 'version' ? '' : '#') + section.url}}" ng-if="section.type === 'link'">
-            <md-icon>account_balance</md-icon>
-            <span class="menu-name">{{section.name}}</span>
-            <span class="md-visually-hidden" ng-if="isSelected(section)">
-                current page
-            </span>
-        </md-button>
-        <md-button ng-if="section.type === 'toggle'" class="md-button-toggle" ng-click="toggleOpen(section)">
-            <div flex layout="row" layout-align="start center">
-                <md-icon>account_balance</md-icon>
-                <span class="menu-name">{{section.name}}</span>
-                <span flex=""></span>
-                <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen(section)}">
-                    <md-icon>expand_less</md-icon>
-                </span>
-            </div>
-        </md-button>
-        <ul ng-if="section.type === 'toggle'" class="menu-toggle-list">
-            <li ng-repeat="page in section.pages">
-                <md-button ng-class="{'active' : isSelected(page)}" ng-click="focusSection()" ng-href="{{(page.type === 'version' ? '' : '#') + section.url}}">
-                    <md-icon>account_balance</md-icon>
-                    <span class="menu-name">{{page.name}}</span>
-                    <span class="md-visually-hidden" ng-if="isSelected(page)">
-                        current page
-                    </span>
-                </md-button>
-            </li>
-        </ul>
+        <menu-link ng-if="section.type === 'link'" section="section"></menu-link>
+        <menu-toggle ng-if="section.type === 'toggle'" section="section"></menu-toggle>
     </li>
 </ul>

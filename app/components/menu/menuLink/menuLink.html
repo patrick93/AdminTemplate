@@ -1,0 +1,7 @@
+<md-button ng-class="{'active' : isSelected(section)}" ng-click="focusSection()" ng-href="{{(section.type === 'version' ? '' : '#') + section.url}}">
+    <md-icon>account_balance</md-icon>
+    <span class="menu-name">{{section.name}}</span>
+    <span class="md-visually-hidden" ng-if="isSelected(section)">
+        current page
+    </span>
+</md-button>

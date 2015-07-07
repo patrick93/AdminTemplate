@@ -17,8 +17,10 @@
     "files": [
         "./app/app.ts",
         "./app/components/main/mainController.ts",
-        "./app/components/menu/menuController.ts",
+        "./app/components/menu/menuDirective.ts",
         "./app/components/menu/menuFactory.ts",
+        "./app/components/menu/menuLink/menuLink.ts",
+        "./app/components/menu/menuToggle/menuToggle.ts",
         "./typings/angularjs/angular.d.ts",
         "./typings/jquery/jquery.d.ts",
         "./typings/tsd.d.ts"
