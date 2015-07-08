@@ -4,8 +4,8 @@ angular.module('Template').directive('menuLink', [function() {
       section: '='
     },
     templateUrl: 'components/menu/menuLink/menuLink.html',
-    link: function($scope, $element) {
-      var controller = $element.parent().parent().scope();
+    link: function($scope) {
+      var controller = angular.element(document.querySelector('side-menu')).children().scope();
 
       $scope.isSelected = function() {
         return controller.isSelected($scope.section);

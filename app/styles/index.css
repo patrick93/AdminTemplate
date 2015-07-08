@@ -12,3 +12,27 @@ md-sidenav, .nav, .nav.md-locked-open, .nav.md-locked-open {
 .content {
     background-color: #F5F5F5;
 }
+
+md-backdrop.md-opaque{
+    background-color: transparent;
+    height: 0;
+}
+
+md-sidenav.md-sidenav-left.md-closed{
+  display: block;
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  transform: translate3d(0%, 0, 0);
+}
+
+md-sidenav.md-sidenav-left{
+    position: static;
+    transform: translate3d(0, 0, 0);
+}
+
+md-sidenav.md-sidenav-left.md-closed .menu-name,
+md-sidenav.md-sidenav-left.md-closed .md-toggle-icon
+{
+    display: none;
+}

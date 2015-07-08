@@ -10,12 +10,6 @@
 </md-button>
 <ul class="menu-toggle-list">
     <li ng-repeat="page in section.pages">
-        <md-button ng-class="{'active' : isSelected(page)}" ng-click="focusSection()" ng-href="{{(page.type === 'version' ? '' : '#') + section.url}}">
-            <md-icon>account_balance</md-icon>
-            <span class="menu-name">{{page.name}}</span>
-            <span class="md-visually-hidden" ng-if="isSelected(page)">
-                current page
-            </span>
-        </md-button>
+        <menu-link section="page"></menu-link>
     </li>
 </ul>
