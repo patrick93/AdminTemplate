@@ -21,6 +21,7 @@
         "./app/components/menu/menuFactory.ts",
         "./app/components/menu/menuLink/menuLink.ts",
         "./app/components/menu/menuToggle/menuToggle.ts",
+        "./app/components/wizard/wizardDirective.ts",
         "./typings/angularjs/angular.d.ts",
         "./typings/jquery/jquery.d.ts",
         "./typings/tsd.d.ts"

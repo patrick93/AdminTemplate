@@ -4,4 +4,17 @@ angular.module('Template').controller('mainController', ['$scope', '$mdSidenav',
         $mdSidenav(menuId).toggle();
     };
     $scope.menu = menuFactory.menu;
+
+    $scope.wizard = {
+        steps: [
+            {
+                Title: 'Step 1',
+                url: 'components/wizard/demo/step1.html'
+            },
+            {
+                Title: 'Step 2',
+                url: 'components/wizard/demo/step2.html'
+            }
+        ]
+    };
 }]);

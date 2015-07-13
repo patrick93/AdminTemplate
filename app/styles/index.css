@@ -36,3 +36,8 @@ md-sidenav.md-sidenav-left.md-closed .md-toggle-icon
 {
     display: none;
 }
+
+md-progress-linear:not([md-mode="indeterminate"]) .md-container{
+    height: 3px;
+    background-color: transparent;
+}
