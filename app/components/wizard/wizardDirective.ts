@@ -15,6 +15,7 @@ module Template {
         function wizardController($scope, $element, $timeout) {
             var self = this;
             self.selected = 0;
+            self.progressValue = 0;
             $element.find('md-ink-bar').css('display', 'none');
 
             self.nextStep = function(){
@@ -24,6 +25,36 @@ module Template {
             self.previous = function(){
                 self.selected -= 1;
             }
+
+            activate();
+
+            function updateProgress(){
+                var totalWidth = $element.find('md-tabs-canvas')[0].offsetWidth;
+                var tabWidth = $element.find('md-tab-item')[0];
+                if (tabWidth) {
+                    tabWidth = tabWidth.offsetWidth;
+                    self.progressValue = (((self.selected+1)*tabWidth)/totalWidth)*100;
+                }
+            }
+
+            function activate(){
+                var progress = $element.find('md-progress-linear');
+                var tabs_header = $element.find('md-tabs-canvas');
+                progress.css({position: 'inherit', top: tabs_header[0].offsetHeight-3 + 'px'});
+                setupWatcher();
+            }
+
+            function setupWatcher() {
+                $scope.$watch(function(){
+                        return $element.find('md-tab-item').length;
+                    }, function(newValue, oldValue){
+                            updateProgress();
+                        });
+                $scope.$watch('wizardCtrl.selected', function(newValue, oldValue){
+                    updateProgress()
+                });
+            }
+
         }
     }
 }

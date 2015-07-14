@@ -1,6 +1,6 @@
 <div class="md-whiteframe-z1">
     <md-content class="md-padding">
-        <md-progress-linear md-mode="determinate" ng-value="50"></md-progress-linear>
+        <md-progress-linear md-mode="determinate" ng-value="wizardCtrl.progressValue"></md-progress-linear>
         <md-tabs md-border-bottom md-dynamic-height md-no-bar="true" md-stretch-tabs="always" md-selected="wizardCtrl.selected">
             <md-tab ng-repeat="step in wizard.steps">
                 <md-tab-label>
