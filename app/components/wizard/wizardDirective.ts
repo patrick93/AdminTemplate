@@ -39,8 +39,14 @@ module Template {
 
             function activate(){
                 var progress = $element.find('md-progress-linear');
-                var tabs_header = $element.find('md-tabs-canvas');
-                progress.css({position: 'inherit', top: tabs_header[0].offsetHeight-3 + 'px'});
+                var tabs_header = $element.find('md-tabs-canvas')[0].offsetHeight;
+                var tabs_height = $element.find('md-tabs')[0].offsetHeight;
+                var content_height = tabs_height - tabs_header;
+                var contents = $element.find('md-tab-content');
+                angular.forEach(contents, function(el){
+                        el.children().children().css({height: content_height + 'px'})
+                    })
+                progress.css({position: 'inherit', top: tabs_header-3 + 'px'});
                 setupWatcher();
             }
 
