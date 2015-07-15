@@ -37,20 +37,26 @@ module Template {
                 }
             }
 
+            function updateContentHeight(content_height){
+                var contents = $element.find('md-tab-content').children().children();
+                contents.css({height: content_height + 'px'});
+            }
+
             function activate(){
                 var progress = $element.find('md-progress-linear');
                 var tabs_header = $element.find('md-tabs-canvas')[0].offsetHeight;
-                var tabs_height = $element.find('md-tabs')[0].offsetHeight;
-                var content_height = tabs_height - tabs_header;
-                var contents = $element.find('md-tab-content');
-                angular.forEach(contents, function(el){
-                        el.children().children().css({height: content_height + 'px'})
-                    })
+                var main_area = $element.parent()[0].offsetHeight;
+                var content_height = main_area - tabs_header - 128 - 68;
                 progress.css({position: 'inherit', top: tabs_header-3 + 'px'});
-                setupWatcher();
+                setupWatcher(content_height);
             }
 
-            function setupWatcher() {
+            function setupWatcher(content_height) {
+                $scope.$watch(function(){
+                        return $element.find('md-tab-content').children().children().length;
+                    }, function(newValue, oldValue){
+                            updateContentHeight(content_height);
+                        });
                 $scope.$watch(function(){
                         return $element.find('md-tab-item').length;
                     }, function(newValue, oldValue){
