@@ -14,6 +14,14 @@ angular.module('Template').controller('mainController', ['$scope', '$mdSidenav',
             {
                 Title: 'Step 2',
                 url: 'components/wizard/demo/step2.html'
+            },
+            {
+                Title: 'Step 3',
+                url: 'components/wizard/demo/step3.html'
+            },
+            {
+                Title: 'Step 4',
+                url: 'components/wizard/demo/step3.html'
             }
         ]
     };
