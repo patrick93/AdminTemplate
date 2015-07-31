@@ -7,7 +7,9 @@
                     {{step.Title}}
                 </md-tab-label>
                 <md-tab-body>
-                    <md-content class="md-padding" ng-include="step.url"></md-content>
+                    <form name="wizardForm">
+                        <md-content class="md-padding" ng-include="step.url"></md-content>
+                    </form>
                 </md-tab-body>
             </md-tab>
         </md-tabs>
