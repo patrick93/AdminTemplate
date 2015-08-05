@@ -1,30 +1,30 @@
 <div class="md-whiteframe-z1">
     <md-content class="md-padding">
         <md-progress-linear md-mode="determinate" ng-value="wizardCtrl.progressValue"></md-progress-linear>
-        <md-tabs md-border-bottom md-dynamic-height md-no-bar="true" md-stretch-tabs="always" md-selected="wizardCtrl.selected">
-            <md-tab ng-repeat="step in wizard.steps">
-                <md-tab-label>
-                    {{step.Title}}
-                </md-tab-label>
-                <md-tab-body>
-                    <form name="wizardForm">
+        <form name="wizardForm">
+            <md-tabs md-border-bottom md-dynamic-height md-no-bar="true" md-selected="wizardCtrl.selected" md-stretch-tabs="always">
+                <md-tab ng-repeat="step in wizard.steps">
+                    <md-tab-label>
+                        {{step.Title}}
+                    </md-tab-label>
+                    <md-tab-body>
                         <md-content class="md-padding" ng-include="step.url"></md-content>
-                    </form>
-                </md-tab-body>
-            </md-tab>
-        </md-tabs>
-        <!-- <div layout="row" layout-align="center center">
+                    </md-tab-body>
+                </md-tab>
+            </md-tabs>
+<!-- <div layout="row" layout-align="center center">
             <md-button class="md-raised md-warn">Cancel</md-button>
             <md-button class="md-raised md-primary">Previous</md-button>
             <md-button class="md-raised md-primary">Next</md-button>
         </div> -->
-        <div layout="row" layout-align="space-between center">
-            <md-button class="md-fab md-primary" ng-click="wizardCtrl.previous()">
-                <md-icon>navigate_before</md-icon>
-            </md-button>
-            <md-button class="md-fab md-primary" ng-click="wizardCtrl.nextStep()">
-                <md-icon>navigate_next</md-icon>
-            </md-button>
-        </div>
+            <div layout-align="space-between center" layout="row">
+                <md-button class="md-fab md-primary" ng-click="wizardCtrl.previous()">
+                    <md-icon>navigate_before</md-icon>
+                </md-button>
+                <md-button class="md-fab md-primary" ng-click="wizardCtrl.nextStep()" ng-disabled="wizardForm.$invalid">
+                    <md-icon>navigate_next</md-icon>
+                </md-button>
+            </div>
+        </form>
     </md-content>
 </div>

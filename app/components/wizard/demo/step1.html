@@ -1,17 +1,20 @@
 <h1 class="md-display-2">Informações Básicas</h1>
-<md-content layout-align="center start" layout-padding layout>
+<md-content layout-align="center start" layout="row">
+    <md-input-container flex="33">
+        <label>Submission Date</label>
+        <input type="text" name="input1" required ng-model="input1">
+        <ng-messages for="wizardForm.input1.$error">
+            <ng-message when="required">This is Required</ng-message>
+        </ng-messages>
+    </md-input-container>
+</md-content>
+<md-content layout-align="center start" layout="row">
     <md-input-container flex="33">
         <label>Submission Date</label>
         <input type="text">
     </md-input-container>
 </md-content>
-<md-content layout-align="center start" layout-padding layout>
-    <md-input-container flex="33">
-        <label>Submission Date</label>
-        <input type="text">
-    </md-input-container>
-</md-content>
-<md-content layout-align="center start" layout-padding layout>
+<md-content layout-align="center start" layout="row">
     <md-input-container flex="33">
         <label>Submission Date</label>
         <input type="text">

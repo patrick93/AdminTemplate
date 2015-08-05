@@ -1,4 +1,4 @@
-angular.module('Template', ['ngMaterial'])
+angular.module('Template', ['ngMaterial', 'ngMessages'])
     .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
         .primaryPalette('blue', {
