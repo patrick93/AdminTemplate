@@ -41,3 +41,19 @@ md-progress-linear:not([md-mode="indeterminate"]) .md-container{
     height: 3px;
     background-color: transparent;
 }
+
+.md-fab.success-button{
+    background-color: rgba(92, 184, 92, 1);
+}
+
+.md-fab.success-button:not([disabled]):hover{
+    background-color: rgba(92, 184, 92, 1);
+}
+
+.md-fab.danger-button{
+    background-color: rgba(201, 48, 44, 1);
+}
+
+.md-fab.danger-button:not([disabled]):hover{
+    background-color: rgba(201, 48, 44, 1);
+}

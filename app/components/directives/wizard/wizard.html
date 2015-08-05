@@ -13,11 +13,17 @@
                 </md-tab>
             </md-tabs>
             <div layout-align="space-between center" layout="row">
-                <md-button class="md-fab md-primary" ng-click="wizardCtrl.previous()">
+                <md-button class="md-fab danger-button">
+                    <md-icon>close</md-icon>
+                </md-button>
+                <md-button class="md-fab md-primary" ng-click="wizardCtrl.previousStep()" ng-disabled="wizardCtrl.isFirstStep()">
                     <md-icon>navigate_before</md-icon>
                 </md-button>
-                <md-button class="md-fab md-primary" ng-click="wizardCtrl.nextStep()" ng-disabled="wizardForm.$invalid">
+                <md-button class="md-fab md-primary" ng-click="wizardCtrl.nextStep()" ng-disabled="wizardForm.$invalid || wizardCtrl.isLastStep()">
                     <md-icon>navigate_next</md-icon>
+                </md-button>
+                <md-button class="md-fab success-button" ng-disabled="wizardForm.$invalid || !wizardCtrl.isLastStep()">
+                    <md-icon>check</md-icon>
                 </md-button>
             </div>
         </form>

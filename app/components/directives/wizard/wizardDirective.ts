@@ -16,17 +16,29 @@ module Template {
             var self = this;
             self.selected = 0;
             self.progressValue = 0;
-            $element.find('md-ink-bar').css({display: 'none'});
 
-            self.nextStep = function(){
+            self.nextStep = nextStep;
+            self.previousStep = previousStep;
+            self.isLastStep = isLastStep;
+            self.isFirstStep = isFirstStep;
+
+            activate();
+
+            function nextStep(){
                 self.selected += 1;
             }
 
-            self.previous = function(){
+            function previousStep(){
                 self.selected -= 1;
             }
 
-            activate();
+            function isFirstStep() {
+                return self.selected == 0;
+            }
+
+            function isLastStep() {
+                return self.selected == $scope.wizard.steps.length - 1;
+            }
 
             function updateProgress(){
                 self.progressValue = (100/$scope.wizard.steps.length)*(self.selected+1);
@@ -38,6 +50,7 @@ module Template {
             }
 
             function activate(){
+                $element.find('md-ink-bar').css({display: 'none'});
                 var progress = $element.find('md-progress-linear');
                 var tabs_header = $element.find('md-tabs-canvas')[0].offsetHeight;
                 var main_area = $element.parent()[0].offsetHeight;
