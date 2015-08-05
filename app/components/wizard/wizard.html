@@ -3,7 +3,7 @@
         <md-progress-linear md-mode="determinate" ng-value="wizardCtrl.progressValue"></md-progress-linear>
         <form name="wizardForm">
             <md-tabs md-border-bottom md-dynamic-height md-no-bar="true" md-selected="wizardCtrl.selected" md-stretch-tabs="always">
-                <md-tab ng-repeat="step in wizard.steps">
+                <md-tab ng-disabled="wizardForm.$invalid && wizardCtrl.selected != $index" ng-repeat="step in wizard.steps">
                     <md-tab-label>
                         {{step.Title}}
                     </md-tab-label>
@@ -12,11 +12,6 @@
                     </md-tab-body>
                 </md-tab>
             </md-tabs>
-<!-- <div layout="row" layout-align="center center">
-            <md-button class="md-raised md-warn">Cancel</md-button>
-            <md-button class="md-raised md-primary">Previous</md-button>
-            <md-button class="md-raised md-primary">Next</md-button>
-        </div> -->
             <div layout-align="space-between center" layout="row">
                 <md-button class="md-fab md-primary" ng-click="wizardCtrl.previous()">
                     <md-icon>navigate_before</md-icon>
