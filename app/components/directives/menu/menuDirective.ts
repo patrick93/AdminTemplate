@@ -4,7 +4,7 @@ angular.module('Template').directive('sideMenu', ['$timeout', function($timeout)
         scope: {
             menu: '='
         },
-        templateUrl: 'components/menu/menu.html',
+        templateUrl: 'components/directives/menu/menu.html',
         controller: function($scope, $element) {
             if ($scope.menu[0].type === 'link') {
                 $scope.pageSelected = $scope.menu[0];

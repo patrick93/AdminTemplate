@@ -9,19 +9,19 @@ angular.module('Template').controller('mainController', ['$scope', '$mdSidenav',
         steps: [
             {
                 Title: 'Step 1',
-                url: 'components/wizard/demo/step1.html'
+                url: 'components/demo/step1.html'
             },
             {
                 Title: 'Step 2',
-                url: 'components/wizard/demo/step2.html'
+                url: 'components/demo/step2.html'
             },
             {
                 Title: 'Step 3',
-                url: 'components/wizard/demo/step3.html'
+                url: 'components/demo/step3.html'
             },
             {
                 Title: 'Step 4',
-                url: 'components/wizard/demo/step3.html'
+                url: 'components/demo/step3.html'
             }
         ]
     };

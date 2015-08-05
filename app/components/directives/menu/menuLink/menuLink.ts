@@ -3,7 +3,7 @@ angular.module('Template').directive('menuLink', [function() {
     scope: {
       section: '='
     },
-    templateUrl: 'components/menu/menuLink/menuLink.html',
+    templateUrl: 'components/directives/menu/menuLink/menuLink.html',
     link: function($scope) {
       var controller = (<any>angular.element(document.querySelector('side-menu')).children()).scope();
 

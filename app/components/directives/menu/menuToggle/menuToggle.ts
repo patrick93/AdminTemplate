@@ -3,7 +3,7 @@ angular.module('Template').directive('menuToggle', [ '$timeout', function($timeo
     scope: {
       section: '='
     },
-    templateUrl: 'components/menu/menuToggle/menuToggle.html',
+    templateUrl: 'components/directives/menu/menuToggle/menuToggle.html',
     link: function($scope, $element) {
       var controller = $element.parent().parent().scope();
       var $ul = $element.find('ul');

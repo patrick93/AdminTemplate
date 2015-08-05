@@ -5,7 +5,7 @@ module Template {
             scope: {
                 wizard: '='
             },
-            templateUrl: 'components/wizard/wizard.html',
+            templateUrl: 'components/directives/wizard/wizard.html',
             controller: wizardController,
             controllerAs: 'wizardCtrl'
         };
