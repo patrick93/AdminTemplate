@@ -31,6 +31,7 @@ md-sidenav.md-sidenav-left{
     transform: translate3d(0, 0, 0);
 }
 
+md-sidenav.md-sidenav-left.md-closed header img,
 md-sidenav.md-sidenav-left.md-closed .menu-name,
 md-sidenav.md-sidenav-left.md-closed .md-toggle-icon
 {
