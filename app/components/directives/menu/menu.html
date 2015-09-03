@@ -1,6 +1,14 @@
-<ul class="docs-menu">
-    <li class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
-        <menu-link ng-if="section.type === 'link'" section="section"></menu-link>
-        <menu-toggle ng-if="section.type === 'toggle'" section="section"></menu-toggle>
-    </li>
-</ul>
+<md-sidenav class="nav md-sidenav-left md-whiteframe-z2" layout="column" md-component-id="left" md-is-open="isSidenavOpen ">
+    <header layout layout-align="start center" style="height: 64px;">
+        <md-button class="md-icon-button" ng-click="toggleSidenav('left')">
+            <md-icon aria-label="Menu">menu</md-icon>
+        </md-button>
+        <img alt="" src="img/logo.png" style="height: 64px;"/>
+    </header>
+    <ul class="docs-menu">
+        <li class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
+            <menu-link ng-if="section.type === 'link'" section="section"></menu-link>
+            <menu-toggle ng-if="section.type === 'toggle'" section="section"></menu-toggle>
+        </li>
+    </ul>
+</md-sidenav>

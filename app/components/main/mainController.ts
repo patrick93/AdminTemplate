@@ -1,8 +1,4 @@
-angular.module('Template').controller('mainController', ['$scope', '$mdSidenav', 'menuFactory', function($scope, $mdSidenav, menuFactory) {
-    $scope.isOpen = true;
-    $scope.toggleSidenav = function(menuId) {
-        $mdSidenav(menuId).toggle();
-    };
+angular.module('Template').controller('mainController', ['$scope', 'menuFactory', function($scope, menuFactory){
     $scope.menu = menuFactory.menu;
 
     $scope.wizard = {

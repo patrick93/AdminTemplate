@@ -12,15 +12,7 @@
 </head>
 
 <body layout="row" ng-controller="mainController">
-    <md-sidenav layout="column" class="nav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-open="isOpen ">
-        <header style="height: 64px;" layout layout-align="start center">
-            <md-button ng-click="toggleSidenav('left')" class="md-icon-button">
-                <md-icon aria-label="Menu">menu</md-icon>
-            </md-button>
-            <img src="img/logo.png" style="height: 64px;" alt="" />
-        </header>
-        <side-menu menu="menu"></menu>
-    </md-sidenav>
+    <side-menu layout="row" menu="menu"></side-menu>
     <div layout="column" flex>
         <md-toolbar layout="row" class="md-whiteframe-z2">
             <div class="md-toolbar-tools">

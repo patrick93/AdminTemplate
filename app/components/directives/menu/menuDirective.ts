@@ -1,4 +1,4 @@
-angular.module('Template').directive('sideMenu', ['$timeout', function($timeout) {
+angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSidenav) {
     return {
         restrict: 'E',
         scope: {
@@ -6,6 +6,11 @@ angular.module('Template').directive('sideMenu', ['$timeout', function($timeout)
         },
         templateUrl: 'components/directives/menu/menu.html',
         controller: function($scope, $element) {
+            $scope.isSidenavOpen = true;
+            $scope.toggleSidenav = function(menuId) {
+                $mdSidenav(menuId).toggle();
+            };
+
             if ($scope.menu[0].type === 'link') {
                 $scope.pageSelected = $scope.menu[0];
                 $scope.openedSection = null;
@@ -19,7 +24,7 @@ angular.module('Template').directive('sideMenu', ['$timeout', function($timeout)
                 return $scope.pageSelected === page;
             }
 
-            $scope.isOpen = function(section) {
+            $scope.isMenuOpen = function(section) {
                 return $scope.openedSection === section;
             }
 

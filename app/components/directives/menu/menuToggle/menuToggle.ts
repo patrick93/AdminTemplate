@@ -10,14 +10,14 @@ angular.module('Template').directive('menuToggle', [ '$timeout', function($timeo
       var originalHeight;
 
       $scope.isOpen = function() {
-        return controller.isOpen($scope.section);
+        return controller.isMenuOpen($scope.section);
       };
       $scope.toggle = function() {
         controller.toggleOpen($scope.section);
       };
       $scope.$watch(
           function () {
-            return controller.isOpen($scope.section);
+            return controller.isMenuOpen($scope.section);
           },
           function (open) {
             var $ul = $element.find('ul');
