@@ -1,3 +1,39 @@
+md-sidenav, .nav, .nav.md-locked-open, .nav.md-locked-open {
+    background-color: #E0E0E0;
+    width: 256px;
+    max-width: 256px;
+    min-width: 256px;
+}
+md-backdrop.md-opaque {
+    background-color: transparent;
+    height: 0;
+}
+md-sidenav.md-sidenav-left.md-closed {
+    display: block;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    transform: translate3d(0%, 0, 0);
+}
+md-sidenav.md-sidenav-left {
+    position: static;
+    transform: translate3d(0, 0, 0);
+}
+md-sidenav.md-sidenav-left header img, md-sidenav.md-sidenav-left .menu-name, md-sidenav.md-sidenav-left .md-toggle-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0s;
+    transition: visibility 0s;
+}
+md-sidenav.md-sidenav-left.md-closed header img, md-sidenav.md-sidenav-left.md-closed .menu-name, md-sidenav.md-sidenav-left.md-closed .md-toggle-icon {
+    width: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 2s;
+}
+md-sidenav.md-sidenav-left.md-closed menu-link .md-button .material-icons {
+    line-height: 1.5;
+}
 .docs-menu, .docs-menu ul {
     list-style: none;
     padding: 0;
@@ -15,7 +51,6 @@
     border-radius: 0;
     cursor: pointer;
     display: block;
-    line-height: 40px;
     margin: 0;
     max-height: 40px;
     overflow: hidden;
@@ -47,7 +82,7 @@
     padding: 0;
 }
 .docs-menu .md-button.active {
-    background: rgba(158,158,158,0.2);
+    background: rgba(158, 158, 158, 0.2);
 }
 .docs-menu li.parentActive, .docs-menu li.parentActive .menu-toggle-list {
     /*background-color: #2C80D2 !important;*/
@@ -84,6 +119,6 @@
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
 }
-.menu-name{
+.menu-name {
     padding-left: 10px;
 }
