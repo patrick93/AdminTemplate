@@ -16,23 +16,21 @@ md-sidenav.md-sidenav-left.md-closed {
     transform: translate3d(0%, 0, 0);
 }
 md-sidenav.md-sidenav-left {
+    overflow-x: hidden;
     position: static;
     transform: translate3d(0, 0, 0);
 }
 md-sidenav.md-sidenav-left header img, md-sidenav.md-sidenav-left .menu-name, md-sidenav.md-sidenav-left .md-toggle-icon {
     visibility: visible;
-    opacity: 1;
-    transition: opacity 0s;
-    transition: visibility 0s;
 }
 md-sidenav.md-sidenav-left.md-closed header img, md-sidenav.md-sidenav-left.md-closed .menu-name, md-sidenav.md-sidenav-left.md-closed .md-toggle-icon {
-    width: 0px;
     visibility: hidden;
-    opacity: 0;
-    transition-delay: 2s;
 }
-md-sidenav.md-sidenav-left.md-closed menu-link .md-button .material-icons {
-    line-height: 1.5;
+md-sidenav.md-sidenav-left header img{
+    width: 128px;
+}
+md-sidenav.md-sidenav-left.md-closed header img{
+    width: 0px;
 }
 .docs-menu, .docs-menu ul {
     list-style: none;
@@ -52,6 +50,7 @@ md-sidenav.md-sidenav-left.md-closed menu-link .md-button .material-icons {
     cursor: pointer;
     display: block;
     margin: 0;
+    line-height: 40px;
     max-height: 40px;
     overflow: hidden;
     padding: 0px 16px;
