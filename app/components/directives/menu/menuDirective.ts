@@ -25,7 +25,8 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
             }
 
             $scope.isMenuOpen = function(section) {
-                return $scope.openedSection === section;
+                //return $scope.isSidenavOpen ? $scope.openedSection === section : false;
+                return $scope.openedSection == section;
             }
 
             $scope.toggleOpen = function(section) {

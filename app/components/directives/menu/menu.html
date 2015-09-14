@@ -6,7 +6,7 @@
         <img alt="" src="img/logo.png" style="height: 64px;"/>
     </header>
     <ul class="docs-menu">
-        <li class="parent-list-item {{section.className || ''}}" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
+        <li class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
             <menu-link ng-if="section.type === 'link'" section="section"></menu-link>
             <menu-toggle ng-if="section.type === 'toggle'" section="section"></menu-toggle>
         </li>
