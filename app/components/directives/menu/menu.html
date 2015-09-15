@@ -7,8 +7,8 @@
     </header>
     <ul class="docs-menu">
         <li class="parent-list-item" ng-class="{'parentActive' : isSectionSelected(section)}" ng-repeat="section in menu">
-            <menu-link ng-if="section.type === 'link'" section="section"></menu-link>
-            <menu-toggle ng-if="section.type === 'toggle'" section="section"></menu-toggle>
+            <menu-link ng-if="section.type === 'link'" page="section"></menu-link>
+            <menu-toggle ng-if="section.type === 'toggle'"  ng-mouseenter="mouseOver(section)" ng-mouseleave="mouseOver(section)" section="section"></menu-toggle>
         </li>
     </ul>
 </md-sidenav>

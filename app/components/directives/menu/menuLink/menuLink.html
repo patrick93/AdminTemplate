@@ -1,9 +1,9 @@
-<md-button ng-class="{'active' : isSelected(section)}" ng-click="focusSection()" ng-href="{{(section.type === 'version' ? '' : '#') + section.url}}">
+<md-button ng-class="{'active' : isSelected()}" ng-click="focusSection()" ng-href="{{(section.type === 'version' ? '' : '#') + section.url}}">
     <div flex layout-align="start center" layout="row">
         <md-icon>account_balance</md-icon>
-        <span class="menu-name">{{section.name}}</span>
+        <span class="menu-name">{{page.name}}</span>
         <span flex=""></span>
-        <span class="md-visually-hidden" ng-if="isSelected(section)">
+        <span class="md-visually-hidden" ng-if="isSelected(page)">
             current page
         </span>
     </div>

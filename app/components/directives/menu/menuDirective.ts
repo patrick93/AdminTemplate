@@ -26,7 +26,7 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
             }
 
             $scope.isMenuOpen = function(section) {
-                return $scope.openedSection == section;
+                return $scope.openedSection === section;
             }
 
             $scope.toggleOpen = function(section) {
@@ -37,6 +37,10 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
                 if (!$scope.isSidenavOpen) {
                     $scope.toggleOpen(section);
                 }
+            }
+            $scope.focusSection = function(section, page) {
+                $scope.pageSelected = page;
+                $scope.openedSection = section;
             }
         }
     }

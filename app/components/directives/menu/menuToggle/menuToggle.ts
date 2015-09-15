@@ -15,12 +15,6 @@ angular.module('Template').directive('menuToggle', ['$timeout', function($timeou
             $scope.toggle = function() {
                 controller.toggleOpen($scope.section);
             };
-            $scope.mouseOver = function() {
-                controller.mouseOver($scope.section);
-            };
-            $scope.mouseLeave = function() {
-                controller.mouseLeave($scope.section);
-            };
             $scope.$watch(
                 function() {
                     return controller.isMenuOpen($scope.section);
