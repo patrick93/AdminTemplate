@@ -1,9 +1,9 @@
-<md-button class="md-button-toggle" ng-click="toggle(section)">
+<md-button class="md-button-toggle" ng-mouseenter="mouseOver()" ng-mouseleave="mouseOver()" ng-click="toggle()">
     <div flex layout="row" layout-align="start center">
         <md-icon>account_balance</md-icon>
         <span class="menu-name">{{section.name}}</span>
         <span flex=""></span>
-        <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen(section)}">
+        <span aria-hidden="true" class="md-toggle-icon" ng-class="{'toggled' : isOpen()}">
             <md-icon>expand_less</md-icon>
         </span>
     </div>

@@ -41,17 +41,26 @@ md-sidenav.md-sidenav-left header img {
 md-sidenav.md-sidenav-left.md-closed header img {
     width: 0px;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .md-button,
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .md-button
+{
+    background-color: #EEEEEE;
+    position: relative;
+    width: 200px;
+}
 md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul
 {
     background-color: #EEEEEE;
+    position: absolute;
+    left: 40px;
+    display: block;
+}
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul .md-button
+{
+    width: 160px;
 }
 md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name{
     visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 60px;
-    width: 200px;
+    margin-left: 20px;
 }
 .docs-menu, .docs-menu ul {
     list-style: none;
