@@ -15,6 +15,12 @@ angular.module('Template').directive('menuToggle', ['$timeout', function($timeou
             $scope.toggle = function() {
                 controller.toggleOpen($scope.section);
             };
+            $scope.isPageFromSectionSelected = function() {
+                return controller.isPageFromSectionSelected($scope.section);
+            };
+            $scope.isDisabled = function() {
+                return !controller.isSidenavOpen;
+            }
             $scope.$watch(
                 function() {
                     return controller.isMenuOpen($scope.section);

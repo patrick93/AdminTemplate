@@ -20,7 +20,7 @@ md-sidenav.md-sidenav-left {
     position: static;
     transform: translate3d(0, 0, 0);
 }
-md-sidenav.md-sidenav-left.md-closed:hover{
+md-sidenav.md-sidenav-left.md-closed:hover {
     overflow: visible;
 }
 md-sidenav.md-sidenav-left header img, md-sidenav.md-sidenav-left .menu-name, md-sidenav.md-sidenav-left .md-toggle-icon {
@@ -41,28 +41,24 @@ md-sidenav.md-sidenav-left header img {
 md-sidenav.md-sidenav-left.md-closed header img {
     width: 0px;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover
-{
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover {
     background-color: #EEEEEE;
     position: relative;
     width: 256px;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul
-{
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul {
     background-color: #EEEEEE;
     position: absolute;
     left: 60px;
     display: block;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .md-button.active
-{
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .md-button.active {
     background: rgba(158, 158, 158, 0.2);
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul .md-button
-{
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul .md-button {
     width: 196px;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name{
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name {
     visibility: visible;
     margin-left: 20px;
 }
@@ -115,11 +111,8 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name{
 .docs-menu button.md-button::-moz-focus-inner {
     padding: 0;
 }
-.docs-menu .md-button.active {
+.docs-menu .md-button.active, .md-button.md-button-toggle:hover {
     background: rgba(158, 158, 158, 0.2);
-}
-.docs-menu li.parentActive, .docs-menu li.parentActive .menu-toggle-list {
-    /*background-color: #2C80D2 !important;*/
 }
 .menu-toggle-list {
     overflow: hidden;
@@ -152,6 +145,12 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name{
 .md-button-toggle .md-toggle-icon.toggled {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+}
+.md-button.md-button-toggle[disabled] {
+    color: inherit;
+}
+.md-button.md-button-toggle[disabled] md-icon {
+    color: rgba(0, 0, 0, 0.54);
 }
 .menu-name {
     padding-left: 10px;

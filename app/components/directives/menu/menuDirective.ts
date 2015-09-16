@@ -15,9 +15,11 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
             if ($scope.menu[0].type === 'link') {
                 $scope.pageSelected = $scope.menu[0];
                 $scope.openedSection = null;
+                $scope.sectionSelected = null;
             } else {
                 var section = $scope.menu[0];
                 $scope.openedSection = section;
+                $scope.sectionSelected = section;
                 $scope.pageSelected = section.pages[0];
             }
 
@@ -41,7 +43,12 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
             $scope.focusSection = function(section, page) {
                 $scope.pageSelected = page;
                 $scope.openedSection = section;
+                $scope.sectionSelected = section;
             }
+
+            $scope.isPageFromSectionSelected = function(section) {
+                return $scope.sectionSelected === section;
+            };
         }
     }
 }]);

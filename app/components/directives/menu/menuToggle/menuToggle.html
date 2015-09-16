@@ -1,4 +1,4 @@
-<md-button class="md-button-toggle" ng-click="toggle()">
+<md-button class="md-button-toggle" ng-click="toggle()" ng-class="{'active' : isPageFromSectionSelected()}" ng-disabled="isDisabled()">
     <div flex layout="row" layout-align="start center">
         <md-icon>account_balance</md-icon>
         <span class="menu-name">{{section.name}}</span>
