@@ -1,11 +1,23 @@
-angular.module('Template').directive('menuToggle', ['$timeout', function($timeout) {
+angular.module('Template').directive('menuToggle', ['$timeout', '$compile', function($timeout, $compile) {
     return {
         scope: {
             section: '='
         },
         templateUrl: 'components/directives/menu/menuToggle/menuToggle.html',
         link: function($scope, $element) {
-            var controller = $element.parent().parent().scope();
+            var template = '<ul class="menu-toggle-list">' +
+                '<li ng-repeat="page in section.pages">' +
+                    '<menu-link ng-if="page.type === \'link\'" page="page" section="section"></menu-link>' +
+                    '<menu-toggle ng-if="page.type === \'toggle\'" section="page"></menu-toggle>' +
+                '</li>'
+            '</ul>';
+            var $template = angular.element(template);
+            $compile($template)($scope);
+            $element.append($template);
+        },
+
+        controller: function($scope, $element) {
+            var controller = (<any>angular.element(document.querySelector('side-menu ul'))).scope();
             var $ul = $element.find('ul');
             var originalHeight;
 
@@ -43,6 +55,7 @@ angular.module('Template').directive('menuToggle', ['$timeout', function($timeou
                     }
                 }
                 );
+
         }
     };
 }])

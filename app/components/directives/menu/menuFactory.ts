@@ -13,11 +13,13 @@ angular.module('Template').factory('menuFactory', [function() {
                 pages: [
                     {
                         name: "Forms",
-                        url: "/Components/Forms"
+                        url: "/Components/Forms",
+                        type: 'link'
                     },
                     {
                         name: "Wizard",
-                        url: "/Components/Wizard"
+                        url: "/Components/Wizard",
+                        type: 'link'
                     }
                 ]
             },
@@ -28,11 +30,29 @@ angular.module('Template').factory('menuFactory', [function() {
                 pages: [
                     {
                         name: "Forms",
-                        url: "/Components/Forms"
+                        url: "/Components/Forms",
+                        type: 'link'
                     },
                     {
                         name: "Wizard",
-                        url: "/Components/Wizard"
+                        url: "/Components/Wizard",
+                        type: 'link'
+                    },
+                    {
+                        name: "Components",
+                        type: "toggle",
+                        pages: [
+                            {
+                                name: "Forms",
+                                url: "/Components/Forms",
+                                type: 'link'
+                            },
+                            {
+                                name: "Wizard",
+                                url: "/Components/Wizard",
+                                type: 'link'
+                            }
+                        ]
                     }
                 ]
             }
