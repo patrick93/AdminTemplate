@@ -18,6 +18,7 @@
         "./app/app.ts",
         "./app/components/directives/menu/menuDirective.ts",
         "./app/components/directives/menu/menuFactory.ts",
+        "./app/components/directives/menu/menuItem/menuItem.ts",
         "./app/components/directives/menu/menuLink/menuLink.ts",
         "./app/components/directives/menu/menuToggle/menuToggle.ts",
         "./app/components/directives/wizard/wizardDirective.ts",
