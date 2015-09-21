@@ -7,7 +7,6 @@ angular.module('Template').factory('menuFactory', [function() {
                 url: "/"
             },
             {
-                id: "components",
                 name: "Components",
                 type: "toggle",
                 pages: [
@@ -24,7 +23,6 @@ angular.module('Template').factory('menuFactory', [function() {
                 ]
             },
             {
-                id: "components",
                 name: "Components",
                 type: "toggle",
                 pages: [
