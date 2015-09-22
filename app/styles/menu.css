@@ -46,25 +46,34 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover {
     position: relative;
     width: 256px;
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul {
-    background-color: #EEEEEE;
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul{
+    display: block;
+}
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover > menu-item > div > ul {
     position: absolute;
     left: 60px;
-    display: block;
 }
 md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .md-button.active {
     background: rgba(158, 158, 158, 0.2);
 }
-md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover ul .md-button {
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover li{
+    background-color: #EEEEEE;
+}
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover > menu-item div ul .md-button {
     width: 196px;
 }
 md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name {
     visibility: visible;
     margin-left: 20px;
 }
-.docs-menu, .docs-menu ul {
+.docs-menu{
     list-style: none;
     padding: 0;
+}
+.docs-menu ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
 }
 .docs-menu li {
     margin: 0;
@@ -88,7 +97,7 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name {
     text-decoration: none;
     white-space: normal;
     width: 100%;
-    min-width: initial;
+    min-width: 60px;;
 }
 .docs-menu md-select {
     /* Override md-select margins.  With margins the menu will look incorrect and causes mobile list
@@ -125,9 +134,8 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name {
     transition: 0.5s cubic-bezier(0.35, 0, 0.25, 1);
     transition-property: height;
 }
-.docs-menu .menu-toggle-list a.md-button {
+.docs-menu .menu-toggle-list .md-button {
     display: block;
-    padding: 0 16px 0 32px;
     text-transform: none;
     text-rendering: optimizeLegibility;
     font-weight: 500;

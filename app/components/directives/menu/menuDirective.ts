@@ -10,7 +10,7 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
 
             $scope.toggleSidenav = function(menuId) {
                 $mdSidenav(menuId).toggle();
-                $scope.openedSection = null;
+                $scope.openedSectionId = '';
             };
 
             generateId($scope.menu, "");
@@ -52,11 +52,18 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
                 }
             }
 
-            $scope.mouseOver = function(section) {
+            $scope.mouseEnter = function(section) {
                 if (!$scope.isSidenavOpen) {
-                    $scope.toggleOpen(section);
+                    $scope.openedSectionId = section.id;
                 }
             }
+
+            $scope.mouseLeave = function(section) {
+                if (!$scope.isSidenavOpen) {
+                    $scope.openedSectionId = '';
+                }
+            }
+
             $scope.focusSection = function(section) {
                 $scope.pageSelectedId = section.id;
             }
