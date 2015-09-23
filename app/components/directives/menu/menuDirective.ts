@@ -52,15 +52,9 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
                 }
             }
 
-            $scope.mouseEnter = function(section) {
-                if (!$scope.isSidenavOpen) {
+            $scope.mouseOver = function(section) {
+                if (!$scope.isSidenavOpen && !$scope.isMenuOpen(section)) {
                     $scope.openedSectionId = section.id;
-                }
-            }
-
-            $scope.mouseLeave = function(section) {
-                if (!$scope.isSidenavOpen) {
-                    $scope.openedSectionId = '';
                 }
             }
 

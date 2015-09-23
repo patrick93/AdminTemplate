@@ -20,11 +20,8 @@ angular.module('Template').directive('menuItem', ['$timeout', '$compile', functi
         $scope.focusSection = function() {
             controller.focusSection($scope.section);
         }
-        $scope.mouseEnter = function() {
-            controller.mouseEnter($scope.section);
-        }
-        $scope.mouseLeave = function() {
-            controller.mouseLeave($scope.section);
+        $scope.mouseOver = function() {
+            controller.mouseOver($scope.section);
         }
         $scope.isOpen = function() {
             return controller.isMenuOpen($scope.section);
@@ -34,6 +31,9 @@ angular.module('Template').directive('menuItem', ['$timeout', '$compile', functi
         }
         $scope.isDisabled = function() {
             return !controller.isSidenavOpen && isSectionInFirstLevel($scope);
+        }
+        $scope.isSectionInFirstLevel = function(){
+            return isSectionInFirstLevel($scope);
         }
 
         function setupWatch() {
@@ -119,7 +119,7 @@ angular.module('Template').directive('menuItem', ['$timeout', '$compile', functi
         function getToggleDivTemplate() {
             var div;
             if (isSectionInFirstLevel($scope)){
-                div = '<div ng-mouseenter="mouseEnter(section)" ng-mouseleave="mouseLeave(section)"></div>';
+                div = '<div ng-mouseover="mouseOver(section)"></div>';
             }else{
                 div = '<div></div>';
             }
@@ -127,12 +127,12 @@ angular.module('Template').directive('menuItem', ['$timeout', '$compile', functi
         }
 
         function getLinkButtonTemplate() {
-            var button = '<md-button ng-class="{\'active\' : isSelected()}" ng-click="focusSection()" ng-href="{{(section.type === \'version\' ? \'\' : \'#\') + section.url}}"></md-button>';
+            var button = '<md-button ng-class="{\'active\' : isSelected(), \'first-level\': isSectionInFirstLevel()}" ng-click="focusSection()" ng-href="{{(section.type === \'version\' ? \'\' : \'#\') + section.url}}"></md-button>';
             return createButtonHTMLFromString(button);
         }
 
         function getToggleButtonTemplate() {
-            var button = '<md-button class="md-button-toggle" ng-click="toggle()" ng-class="{\'active\' : isSelected()}" ng-disabled="isDisabled()"></md-button>';
+            var button = '<md-button class="md-button-toggle" ng-click="toggle()" ng-class="{\'active\' : isSelected(), \'first-level\': isSectionInFirstLevel()}" ng-disabled="isDisabled()"></md-button>';
             return createButtonHTMLFromString(button);
         }
 

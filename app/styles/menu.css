@@ -23,10 +23,10 @@ md-sidenav.md-sidenav-left {
 md-sidenav.md-sidenav-left.md-closed:hover {
     overflow: visible;
 }
-md-sidenav.md-sidenav-left header img, md-sidenav.md-sidenav-left .menu-name, md-sidenav.md-sidenav-left .md-toggle-icon {
+md-sidenav.md-sidenav-left header img, md-sidenav.md-sidenav-left .menu-name, md-sidenav.md-sidenav-left .first-level .md-toggle-icon {
     visibility: visible;
 }
-md-sidenav.md-sidenav-left.md-closed header img, md-sidenav.md-sidenav-left.md-closed .menu-name, md-sidenav.md-sidenav-left.md-closed .md-toggle-icon {
+md-sidenav.md-sidenav-left.md-closed header img, md-sidenav.md-sidenav-left.md-closed .menu-name, md-sidenav.md-sidenav-left.md-closed .first-level .md-toggle-icon {
     visibility: hidden;
 }
 md-sidenav.md-sidenav-left .menu-toggle-list {
@@ -64,6 +64,8 @@ md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover > menu-item div u
 }
 md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .menu-name {
     visibility: visible;
+}
+md-sidenav.md-sidenav-left.md-closed li.parent-list-item:hover .first-level .menu-name {
     margin-left: 20px;
 }
 .docs-menu{
