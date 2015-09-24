@@ -18,11 +18,9 @@ angular.module('Template').directive('sideMenu', ['$mdSidenav', function($mdSide
             if ($scope.menu[0].type === 'link') {
                 $scope.pageSelectedId = $scope.menu[0].id;
                 $scope.openedSectionId = '';
-                $scope.sectionSelectedId = '';
             } else {
                 var section = $scope.menu[0];
                 $scope.openedSectionId = section.id;
-                $scope.sectionSelectedId = section.id;
                 $scope.pageSelectedId = section.pages[0].id;
             }
 
