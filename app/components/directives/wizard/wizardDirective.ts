@@ -55,7 +55,7 @@ module Template {
                 var tabs_header = $element.find('md-tabs-canvas')[0].offsetHeight;
                 var main_area = $element.parent()[0].offsetHeight;
                 var content_height = main_area - tabs_header - 128 - 68;
-                progress.css({position: 'inherit', top: tabs_header-3 + 'px'});
+                progress.css({position: 'inherit', top: tabs_header+2 + 'px'});
                 setupWatcher(content_height);
             }
 
