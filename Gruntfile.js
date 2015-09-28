@@ -6,6 +6,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         appConfig: config,
         watch: {
+            bower:{
+                files: ['bower.json'],
+                tasks: ['shell:bower', 'wiredep']
+            },
             ts: {
                 files: ['<%= appConfig.app %>/**/*.ts'],
                 tasks: ['ts']
@@ -36,6 +40,11 @@ module.exports = function(grunt) {
                 }
             }
         },
+        shell: {
+            bower:{
+                command: 'bower install'
+            }
+        },
         connect: {
             options: {
                 port: 9000,
@@ -59,5 +68,5 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.registerTask('server', ['ts', 'wiredep', 'connect:server', 'watch']);
+    grunt.registerTask('server', ['shell:bower', 'ts', 'wiredep', 'connect:server', 'watch']);
 };
