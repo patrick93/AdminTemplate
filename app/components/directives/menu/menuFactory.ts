@@ -7,68 +7,9 @@ angular.module('Template').factory('menuFactory', [function() {
                 url: "/"
             },
             {
-                name: "Components",
-                type: "toggle",
-                pages: [
-                    {
-                        name: "Forms",
-                        url: "/Components/Forms",
-                        type: 'link'
-                    },
-                    {
-                        name: "Wizard",
-                        url: "/Components/Wizard",
-                        type: 'link'
-                    }
-                ]
-            },
-            {
-                name: "Components",
-                type: "toggle",
-                pages: [
-                    {
-                        name: "Forms",
-                        url: "/Components/Forms",
-                        type: 'link'
-                    },
-                    {
-                        name: "Components",
-                        type: "toggle",
-                        pages: [
-                            {
-                                name: "Forms",
-                                url: "/Components/Forms",
-                                type: 'link'
-                            },
-                            {
-                                name: "Wizard",
-                                url: "/Components/Wizard",
-                                type: 'link'
-                            }
-                        ]
-                    },
-                    {
-                        name: "Wizard",
-                        url: "/Components/Wizard",
-                        type: 'link'
-                    },
-                    {
-                        name: "Components",
-                        type: "toggle",
-                        pages: [
-                            {
-                                name: "Forms",
-                                url: "/Components/Forms",
-                                type: 'link'
-                            },
-                            {
-                                name: "Wizard",
-                                url: "/Components/Wizard",
-                                type: 'link'
-                            }
-                        ]
-                    }
-                ]
+                name: "Wizard",
+                type: "link",
+                url: "/wizard"
             }
         ]
     }

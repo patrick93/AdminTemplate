@@ -16,6 +16,8 @@
     ],
     "files": [
         "./app/app.ts",
+        "./app/components/demo/home/homeController.ts",
+        "./app/components/demo/wizard/wizardController.ts",
         "./app/components/directives/menu/menuDirective.ts",
         "./app/components/directives/menu/menuFactory.ts",
         "./app/components/directives/menu/menuItem/menuItem.ts",
