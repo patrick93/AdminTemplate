@@ -16,4 +16,8 @@ angular.module('Template').config(['$routeProvider', function($routeProvider) {
         templateUrl: 'components/demo/wizard/wizard.html',
         controller: 'wizardController as wizardCtrl'
     })
+        .when('/forms/general', {
+        templateUrl: 'components/demo/forms/general/generalForms.html',
+        controller: 'generalFormsController as generalFormsCtrl'
+    })
 }]);

@@ -3,9 +3,9 @@
     <md-input-container flex="33">
         <label>Submission Date</label>
         <input type="text" name="input1" required ng-model="input1">
-        <ng-messages for="wizardForm.input1.$error">
-            <ng-message when="required">This is Required</ng-message>
-        </ng-messages>
+        <div ng-messages="wizardForm.input1.$error">
+            <div ng-message="required">This is Required</div>
+        </div>
     </md-input-container>
 </md-content>
 <md-content layout-align="center start" layout="row">

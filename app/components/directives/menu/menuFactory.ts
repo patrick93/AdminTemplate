@@ -10,6 +10,17 @@ angular.module('Template').factory('menuFactory', [function() {
                 name: "Wizard",
                 type: "link",
                 url: "/wizard"
+            },
+            {
+                name: "Forms",
+                type: "toggle",
+                pages: [
+                    {
+                        name: "General",
+                        type: "link",
+                        url: "/forms/general"
+                    }
+                ]
             }
         ]
     }
