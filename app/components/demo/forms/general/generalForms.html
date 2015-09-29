@@ -22,6 +22,19 @@
             <input ng-model="generalFormsCtrl.user.job">
         </md-input-container>
     </md-content>
+    <md-radio-group ng-model="generalFormsCtrl.data.group1" layout="row">
+      <md-radio-button value="Apple">Apple</md-radio-button>
+      <md-radio-button value="Banana"> Banana </md-radio-button>
+      <md-radio-button value="Mango">Mango</md-radio-button>
+    </md-radio-group>
+    <md-content layout-padding layout="row">
+        <md-checkbox ng-model="generalFormsCtrl.data.cb1" aria-label="Checkbox 1">
+              Checkbox 1: {{ generalFormsCtrl.data.cb1 }}
+        </md-checkbox>
+        <md-checkbox ng-model="generalFormsCtrl.data.cb2" aria-label="Checkbox 2">
+              Checkbox 2: {{ generalFormsCtrl.data.cb2 }}
+        </md-checkbox>
+    </md-content>
 </md-content>
 <md-content class="md-whiteframe-z1" layout-padding layout="column" flex>
     <md-content layout-padding>
